@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karin Hoelzl- Actor</title>
+  <style>
+      
+    body {
+      margin: 0;
+      font-family: Helvetica, sans-serif;
+      background: #ffffff;
+      color: #222;
+    }
+
+    /* Main layout: stack sidebar on top, content below */
+    .layout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 900px;   /* keep site narrow on big screens */
+      margin: 0 auto;     /* center horizontally */
+      padding: 0 20px;
+    }
+
+    /* Sidebar acts as sticky header */
+    .sidebar {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+      background: #fff;
+      z-index: 1000;
+    }
+
+    .sidebar img {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a img {
+      width: 60%;
+    }
+
+    nav a:hover {
+      opacity: 50%;
+      transition: opacity 0.3s;
+    }
+
+    /* Content */
+    main {
+      width: 100%;
+    }
+
+    /* Gallery */
+    .gallery {
+      column-count: 2;     /* always use tablet-style columns */
+      column-gap: 20px;
+      margin-top: 10px;
+    }
+
+    .gallery-item {
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 15px;
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      border: none;
+    }
+
+    /* Caption overlay */
+    .caption {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 0px 2px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .gallery-item:hover .caption {
+      opacity: 1;
+    }
+
+    /* Video wrapper */
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 */
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Text block in gallery */
+    .gallery-text {
+      display: inline-block;
+      width: 100%;
+      padding: 20px;
+      margin: 0 0 15px;
+      box-sizing: border-box;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      font-size: 1.1rem;
+      line-height: 1.4;
+      color: #000;
+    }
+
+    /* Small phones */
+    @media (max-width: 480px) {
+      .gallery {
+        column-count: 1;
+      }
+    }
+    </style>
+    </head>
+    <body>
+      <div class="layout">
+        <!-- Left column: Logo + Nav -->
+        <aside class="sidebar">
+          <a href="index.html">
+            <img src="images/logo3.png" alt="">
+          </a>
+          <nav>
+            <a href="about.html"><img src="images/about.png" alt="about"></a>
+            <a href="resume.html"><img src="images/resume.png" alt="resume"></a>
+            <a href="work.html"><img src="images/work.png" alt="work"></a>
+          </nav>
+        </aside>
+    
+        <!-- Right column: Content -->
+       <main>
+        <section class="gallery">
+          <div class="gallery-item">
+            <img src="images/headshot1.jpg" alt="Production">
+            <div class="caption">Photo by Jackson </div>
+          </div>
+          <!-- Text block -->
+          <div class="gallery-text">
+            <p>Karin Hoelzl is an actor, writer, and producer originally from Virginia. Her theater journey started in her grandparents’ barn, performing musicals with handmade costumes—the rest has been icing. Karin is especially passionate about new work development and physical theater, with a focus on making art more accessible to contemporary audiences.
+            </p>
+          </div>
+          <!-- More Placeholder Images with captions -->
+          <div class="gallery-item">
+            <img src="images/foothills1.jpg" alt="Headshot">
+            <div class="caption">Photo by Jackson </div>
+          </div>
+           <!-- YouTube Videos (no captions) -->
+           <div class="gallery-item">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/9HGcDaRUUjs?si=d_TVTC-Vfd4C8YW_?rel=0&amp;modestbranding=1" title="Acting Reel"></iframe>
+            </div>
+          </div>
+          <!-- Placeholder Images with captions -->
+          <div class="gallery-item">
+            <img src="images/humblyyours1.jpg" alt="Production">
+            <div class="caption">As Scout in feature film "Humbly Yours, Hassock."</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/foothills2.jpg" alt="Headshot">
+            <div class="caption">Photo by Jackson </div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/taming1.jpg" alt="Production">
+            <div class="caption">As Kat in an adaptation of "Taming of the Shrew." Photo by  </div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/jennyjumpstill.jpg" alt="Performance">
+            <div class="caption">Still from short "Jenny Jump Road"</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/comedy-of-errors1.jpeg" alt="Production">
+            <div class="caption">As Luciana in "Comedy of Errors" with Stairwell Theater. Photo by </div>
+          </div>
+    
+        </section>
+      </main>
+      </div>
+    </body>
+    </html>

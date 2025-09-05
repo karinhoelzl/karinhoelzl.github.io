@@ -1,0 +1,168 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actor Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #222;
+      text-align: center;
+    }
+
+    /* Header logo */
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0 10px;
+    }
+
+    header img {
+      max-width: 250px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    /* Minimal centered nav */
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin: 10px 0 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      color: #222;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff9800;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      padding: 0 15px;
+      text-align: left;
+    }
+
+    /* Masonry layout using columns */
+    .gallery {
+      column-count: 3;
+      column-gap: 15px;
+    }
+
+    .gallery-item {
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 15px;
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      border: none;
+    }
+
+    /* Hover subtitle overlay */
+    .caption {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 4px 6px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .gallery-item:hover .caption {
+      opacity: 1;
+    }
+
+    /* Responsive video wrapper */
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 aspect ratio */
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        column-count: 2;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery {
+        column-count: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo header -->
+  <header>
+    <a href="index.html">
+      <img src="images/name.png" alt="Actor Logo">
+    </a>
+  </header>
+
+  <!-- Centered nav links -->
+  <nav>
+    <a href="about.html">about</a>
+    <a href="resume.html">resume</a>
+    <a href="media.html">media</a>
+  </nav>
+
+  <main>
+    <section class="gallery">
+      <!-- YouTube Videos (no captions) -->
+      <div class="gallery-item">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/9HGcDaRUUjs?si=d_TVTC-Vfd4C8YW_" title="Acting Reel"></iframe>
+        </div>
+      </div>
+      <!-- Placeholder Images with captions -->
+      <div class="gallery-item">
+        <img src="images/foothills1.jpg" alt="Headshot">
+        <div class="caption">Photo by Jackson Kienitz</div>
+      </div>
+
+      <!-- More Placeholder Images with captions -->
+      <div class="gallery-item">
+        <img src="images/foothills2.jpg" alt="Headshot">
+        <div class="caption">Photo by Jackson Kienitz</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/jennyjumpstill.jpg" alt="Performance">
+        <div class="caption">Still from short "Jenny Jump Road"</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/headshot1.jpg" alt="Production">
+        <div class="caption">Photo by Jackson Kienitz</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
